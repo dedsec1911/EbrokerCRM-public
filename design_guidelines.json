@@ -1,0 +1,171 @@
+{
+  "design_system": {
+    "brand_identity": {
+      "name": "EstateFlow CRM",
+      "essence": "Professional, Efficient, Trustworthy, Modern",
+      "archetype": "The Performance Pro (with Organic Warmth)",
+      "vibe": "Swiss Precision meets Botanical Warmth"
+    },
+    "typography": {
+      "headings": {
+        "family": "Outfit, sans-serif",
+        "weights": ["500", "600", "700"],
+        "usage": "Headings, Hero Text, Big Numbers",
+        "letter_spacing": "-0.02em"
+      },
+      "body": {
+        "family": "Plus Jakarta Sans, sans-serif",
+        "weights": ["400", "500"],
+        "usage": "Paragraphs, UI Elements, Data Tables",
+        "letter_spacing": "0em"
+      },
+      "mono": {
+        "family": "JetBrains Mono, monospace",
+        "usage": "Code snippets, IDs, Technical Data"
+      }
+    },
+    "colors": {
+      "palette": {
+        "primary": {
+          "DEFAULT": "#0F4C3A",
+          "foreground": "#FFFFFF",
+          "description": "Deep Emerald Green - Trust & Growth"
+        },
+        "secondary": {
+          "DEFAULT": "#1E293B",
+          "foreground": "#FFFFFF",
+          "description": "Slate Navy - Professionalism"
+        },
+        "accent": {
+          "DEFAULT": "#D4AF37",
+          "foreground": "#000000",
+          "description": "Muted Gold - Premium Status"
+        },
+        "vibrant": {
+          "DEFAULT": "#14B8A6",
+          "foreground": "#FFFFFF",
+          "description": "Teal - Modern Energy (Buttons, CTAs)"
+        },
+        "background": {
+          "light": "#F8FAFC",
+          "dark": "#020617"
+        },
+        "surface": {
+          "light": "#FFFFFF",
+          "dark": "#0F172A"
+        },
+        "text": {
+          "primary": "#0F172A",
+          "secondary": "#64748B",
+          "muted": "#94A3B8"
+        }
+      },
+      "gradients": {
+        "primary": "linear-gradient(135deg, #0F4C3A 0%, #064E3B 100%)",
+        "accent": "linear-gradient(135deg, #14B8A6 0%, #0D9488 100%)",
+        "glass": "linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 100%)"
+      }
+    },
+    "layout": {
+      "spacing": {
+        "container_padding": "p-4 md:p-8 lg:p-12",
+        "section_gap": "gap-8 md:gap-12",
+        "card_padding": "p-6"
+      },
+      "grid": {
+        "dashboard": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6",
+        "property_list": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      },
+      "radius": {
+        "default": "rounded-lg",
+        "card": "rounded-xl",
+        "button": "rounded-md"
+      }
+    },
+    "components": {
+      "buttons": {
+        "primary": "bg-primary text-primary-foreground hover:bg-primary/90 shadow-md transition-all duration-200",
+        "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/90",
+        "outline": "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        "ghost": "hover:bg-accent hover:text-accent-foreground",
+        "vibrant": "bg-vibrant text-vibrant-foreground hover:bg-vibrant/90 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+      },
+      "cards": {
+        "base": "bg-card text-card-foreground rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow duration-200",
+        "glass": "bg-white/70 backdrop-blur-md border border-white/20 shadow-lg",
+        "interactive": "cursor-pointer hover:border-primary/50 transition-colors"
+      },
+      "inputs": {
+        "default": "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+      }
+    },
+    "motion": {
+      "transitions": {
+        "default": "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+        "slow": "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)"
+      },
+      "animations": {
+        "fade_in": "animate-in fade-in zoom-in-95 duration-300",
+        "slide_up": "animate-in slide-in-from-bottom-4 duration-500",
+        "hover_lift": "hover:-translate-y-1 transition-transform duration-200"
+      }
+    },
+    "assets": {
+      "icons": {
+        "library": "lucide-react",
+        "style": "stroke-width: 1.5px"
+      },
+      "images": {
+        "property_placeholder": "https://images.pexels.com/photos/18435276/pexels-photo-18435276.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "interior_placeholder": "https://images.pexels.com/photos/3754595/pexels-photo-3754595.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "luxury_villa": "https://images.pexels.com/photos/17174768/pexels-photo-17174768.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "agent_avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=256&h=256"
+      }
+    },
+    "accessibility": {
+      "contrast": "Ensure 4.5:1 contrast ratio for normal text",
+      "focus_states": "Visible focus ring on all interactive elements",
+      "aria_labels": "Required for icon-only buttons"
+    }
+  },
+  "implementation_guide": {
+    "css_variables": {
+      "root": {
+        "--font-heading": "'Outfit', sans-serif",
+        "--font-body": "'Plus Jakarta Sans', sans-serif",
+        "--primary": "163 67% 18%", 
+        "--primary-foreground": "0 0% 100%",
+        "--secondary": "215 25% 27%",
+        "--secondary-foreground": "0 0% 100%",
+        "--accent": "45 93% 47%",
+        "--accent-foreground": "0 0% 0%",
+        "--vibrant": "174 80% 40%",
+        "--radius": "0.75rem"
+      }
+    },
+    "universal_rules": [
+      "Use 'sonner' for toast notifications.",
+      "Avoid 'Inter' font for headings; use 'Outfit'.",
+      "Use 'lucide-react' for icons.",
+      "Do not use generic gradients; use the specified primary/accent gradients.",
+      "Ensure all interactive elements have hover and focus states.",
+      "Use 'data-testid' for testing stability.",
+      "Mobile-first responsive design is MANDATORY.",
+      "Use 'grid-cols-1' by default for lists, then 'md:grid-cols-X'."
+    ],
+    "specific_components": {
+      "PropertyCard": {
+        "instructions": "Use a card layout with image on top (aspect-video or square on mobile). Price should be a floating badge. Key details (BHK, Location) should be prominent. Add a 'WhatsApp Share' button clearly visible.",
+        "path": "/src/components/PropertyCard.jsx"
+      },
+      "AgentDashboard": {
+        "instructions": "Use a Bento Grid layout. Top section for 'Stats' (Leads, Properties, Views). Main section for 'My Properties' list. Side section for 'Recent Leads'.",
+        "path": "/src/pages/AgentDashboard.jsx"
+      },
+      "WhatsAppShare": {
+        "instructions": "Create a reusable component that accepts property details and generates a pre-filled message URL. Use the official brand color #25D366 for the button.",
+        "path": "/src/components/WhatsAppShare.jsx"
+      }
+    }
+  }
+}
