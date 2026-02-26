@@ -5,6 +5,7 @@ import { Toaster } from '@/components/ui/sonner';
 import '@/App.css';
 
 import LoginPage from '@/pages/LoginPage';
+import AdminSetup from '@/pages/AdminSetup';
 import AgentDashboard from '@/pages/AgentDashboard';
 import AdminDashboard from '@/pages/AdminDashboard';
 import AdminAgentLookup from '@/pages/AdminAgentLookup';
@@ -108,6 +109,7 @@ function App() {
         <div className="App">
           <Routes>
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/admin-setup" element={<AdminSetup />} />
             <Route
               path="/dashboard"
               element={
