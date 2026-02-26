@@ -17,10 +17,6 @@ export default function PropertyDetails() {
   const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchProperty();
-  }, [id]);
-
   const fetchProperty = async () => {
     try {
       const response = await axios.get(`/properties/${id}`);
@@ -32,6 +28,10 @@ export default function PropertyDetails() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchProperty();
+  }, [id]);
 
   const handleApprove = async () => {
     try {
