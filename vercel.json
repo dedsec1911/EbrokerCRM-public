@@ -2,18 +2,5 @@
   "buildCommand": "cd frontend && npm run build",
   "outputDirectory": "frontend/build",
   "installCommand": "cd frontend && npm install",
-  "framework": "react",
-  "env": [
-    "MONGO_URL",
-    "DB_NAME", 
-    "JWT_SECRET_KEY",
-    "CORS_ORIGINS",
-    "FRONTEND_URL",
-    "REACT_APP_BACKEND_URL"
-  ],
-  "functions": {
-    "backend/api/index.py": {
-      "runtime": "python3.11"
-    }
-  }
+  "framework": "react"
 }
