@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAuth } from '@/App';
@@ -17,7 +17,7 @@ export default function PropertyDetails() {
   const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const fetchProperty = async () => {
+  const fetchProperty = useCallback(async () => {
     try {
       const response = await axios.get(`/properties/${id}`);
       setProperty(response.data);
@@ -27,11 +27,11 @@ export default function PropertyDetails() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [id, navigate]);
 
   useEffect(() => {
     fetchProperty();
-  }, [id]);
+  }, [fetchProperty]);
 
   const handleApprove = async () => {
     try {
